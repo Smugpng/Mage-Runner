@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: fe0de35c94a2eae4f988ce52bd921261
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Irregular rock Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 58
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1542ab350b69fb448b2118127e89238
+      internalID: 1020006304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Irregular rock Spritesheet_0: -214978406
+      Irregular rock Spritesheet_1: -1485773707
+      Irregular rock Spritesheet_10: 1503598840
+      Irregular rock Spritesheet_11: 1990927949
+      Irregular rock Spritesheet_12: -1245335411
+      Irregular rock Spritesheet_13: -1987675677
+      Irregular rock Spritesheet_14: -1059665443
+      Irregular rock Spritesheet_15: 1837578850
+      Irregular rock Spritesheet_16: -566473412
+      Irregular rock Spritesheet_17: -1689653563
+      Irregular rock Spritesheet_18: 1885304709
+      Irregular rock Spritesheet_19: 66993827
+      Irregular rock Spritesheet_2: -274244651
+      Irregular rock Spritesheet_20: -1572797684
+      Irregular rock Spritesheet_21: -758376374
+      Irregular rock Spritesheet_22: 1790250998
+      Irregular rock Spritesheet_23: 1953563957
+      Irregular rock Spritesheet_24: -224455211
+      Irregular rock Spritesheet_25: 132024381
+      Irregular rock Spritesheet_26: 286448999
+      Irregular rock Spritesheet_27: 717857896
+      Irregular rock Spritesheet_28: -1102160441
+      Irregular rock Spritesheet_29: 1854022423
+      Irregular rock Spritesheet_3: 350413702
+      Irregular rock Spritesheet_30: -1949965380
+      Irregular rock Spritesheet_31: -650152990
+      Irregular rock Spritesheet_32: -1147790075
+      Irregular rock Spritesheet_33: 1902616972
+      Irregular rock Spritesheet_34: -1599432185
+      Irregular rock Spritesheet_35: -1763781729
+      Irregular rock Spritesheet_36: -345258029
+      Irregular rock Spritesheet_37: -791065006
+      Irregular rock Spritesheet_38: -229442199
+      Irregular rock Spritesheet_4: -952427962
+      Irregular rock Spritesheet_5: 2048128036
+      Irregular rock Spritesheet_6: 617612957
+      Irregular rock Spritesheet_7: 1020006304
+      Irregular rock Spritesheet_8: -504164953
+      Irregular rock Spritesheet_9: -1377998777
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

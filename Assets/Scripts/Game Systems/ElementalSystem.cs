@@ -100,39 +100,39 @@ public class ElementalSystem : MonoBehaviour
         //Particle effects
         if (elementNum == 1)
         {
-            onFire.active = true;
+            onFire.SetActive(true);
            // SmokeCount();
         }
         else
         {
-            onFire.active = false;
+            onFire.SetActive(false);
         }
         if (elementNum == 2)
         {
-            onSparked.active = true;
-           // SmokeCount();
+            onSparked.SetActive(true);
+            // SmokeCount();
         }
         else
         {
-            onSparked.active = false;
+            onSparked.SetActive(false);
         }
         if (elementNum == -1)
         {
-            onWet.active = true;
-           // SmokeCount();
+            onWet.SetActive(true);
+            // SmokeCount();
         }
         else
         {
-            onWet.active = false;
+            onWet.SetActive(false);
         }
         if (elementNum == -2)
         {
-            onCold.active = true;
+            onCold.SetActive(true);
             //SmokeCount();
         }
         else
         {
-            onCold.active = false;
+            onCold.SetActive(false);
         }
 
     }

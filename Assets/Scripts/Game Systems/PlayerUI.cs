@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class healthbar : MonoBehaviour
+public class Healthbar : MonoBehaviour
 {
     [Header("Health Bar Section")]
     public Canvas PlayerCanvas;
@@ -14,8 +15,11 @@ public class healthbar : MonoBehaviour
     private float lastHp;
 
     [Header("Spell Section")]
-    [SerializeField] private UnityEngine.UI.Image _nextSpell, _queuedSpell;
     public WeaponScript WeaponScript;
+    [SerializeField] private UnityEngine.UI.Image _nextSpell, _queuedSpell;
+    public List<Sprite> spellChoices;
+    public int weaponCounterimage;
+    public int nextWeaponCounterimage;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +33,7 @@ public class healthbar : MonoBehaviour
         if (tempObject != null)
         {
             PlayerCanvas = tempObject.GetComponentInChildren<Canvas>();
-            if (PlayerCanvas == null ) 
+            if (PlayerCanvas == null)
             {
                 Debug.Log("Can't find player canvas");
             }
@@ -37,9 +41,11 @@ public class healthbar : MonoBehaviour
         #endregion
 
         #region Spell UI
-        WeaponScript = GetComponent<WeaponScript>();
-        #endregion
-    }
+        WeaponScript = GetComponentInChildren<WeaponScript>();
+        weaponCounterimage = WeaponScript.weaponCounter;
+        nextWeaponCounterimage = WeaponScript.nextWeaponCounter;
+    #endregion
+}
 
     // Update is called once per frame
     void Update()
@@ -53,6 +59,10 @@ public class healthbar : MonoBehaviour
             StartCoroutine(TurnOffHB());
         }
         PlayerCanvas.transform.position = this.transform.position;
+        weaponCounterimage = WeaponScript.weaponCounter;
+        nextWeaponCounterimage = WeaponScript.nextWeaponCounter;
+        _nextSpell.sprite = spellChoices[weaponCounterimage];
+        _queuedSpell.sprite = spellChoices[nextWeaponCounterimage];
     }
     public void UpdateHealthBar()
     {
