@@ -16,10 +16,11 @@ public class Healthbar : MonoBehaviour
 
     [Header("Spell Section")]
     public WeaponScript WeaponScript;
-    [SerializeField] private UnityEngine.UI.Image _nextSpell, _queuedSpell;
+    [SerializeField] private UnityEngine.UI.Image _nextSpell, _queuedSpell, _chargeUI;
     public List<Sprite> spellChoices;
     public int weaponCounterimage;
     public int nextWeaponCounterimage;
+    private float _chargedSpellCount;
 
     // Start is called before the first frame update
     void Start()
@@ -59,16 +60,27 @@ public class Healthbar : MonoBehaviour
             StartCoroutine(TurnOffHB());
         }
         PlayerCanvas.transform.position = this.transform.position;
+
         weaponCounterimage = WeaponScript.weaponCounter;
         nextWeaponCounterimage = WeaponScript.nextWeaponCounter;
         _nextSpell.sprite = spellChoices[weaponCounterimage];
         _queuedSpell.sprite = spellChoices[nextWeaponCounterimage];
+
+        _chargedSpellCount = WeaponScript.chargeTime;
+        UpdateChargeBar();
     }
     public void UpdateHealthBar()
     {
         if (_healthBar != null)
         {
             _healthBar.fillAmount = healthbarCurrent / healthBarStart;
+        }
+    }
+    public void UpdateChargeBar()
+    {
+        if (_chargeUI != null)
+        {
+            _chargeUI.fillAmount = _chargedSpellCount /2;
         }
     }
     private IEnumerator TurnOffHB()

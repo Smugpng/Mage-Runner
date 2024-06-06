@@ -13,7 +13,7 @@ public class WeaponScript : MonoBehaviour
     public string weaponusing;
     public GameObject[] missilePrefab;
     [SerializeField] private GameObject ChargedShot;
-    [SerializeField] private float chargeTime;
+    [SerializeField] public float chargeTime;
     bool isCharging;
     bool isCharged;
     public Transform spawnPos;
