@@ -14,12 +14,19 @@ public class SpellScript : MonoBehaviour
     public bool isMelee;
     private Transform spawn;
     bool isActive = false;
+    
     [Header("Element Effects")]
     public AttackType attackType;
     [Header("Damage Type")]
     [SerializeField] public DamageType dmgType;
     [SerializeField] private float dmg;
-    
+
+    [Header("ChargedShotStuff")]
+    public bool isChargedShot;
+    private Rigidbody2D rigidbody2;
+
+
+
     public enum AttackType //type of Attack
     {
         isFire, isCold, isWet, isSparked, isMuddy
@@ -32,7 +39,7 @@ public class SpellScript : MonoBehaviour
     private void Start()
     {
         spawn = GetComponent<Transform>();
-       
+        rigidbody2 = GetComponent<Rigidbody2D>();   
         if (isMelee)
         {
             StartCoroutine(DestroyAfterDelay(deathTimer));
@@ -40,6 +47,10 @@ public class SpellScript : MonoBehaviour
         if (isHitmark)
         {
             StartCoroutine(DestroyAfterDelay(deathTimer));
+        }
+        if (isChargedShot)
+        {
+            StartCoroutine(StopChargedShot(1));
         }
         dmg = Convert.ToSingle(dmgType);
     }
@@ -71,6 +82,7 @@ public class SpellScript : MonoBehaviour
                 otherRigidbody.AddForce(spawn.right * forceMagnitude, ForceMode2D.Impulse);
             }
         }
+      
     }
 
 
@@ -78,6 +90,12 @@ public class SpellScript : MonoBehaviour
     {
         yield return new WaitForSeconds(deathTimer);
         Destroy(this.gameObject);
+    }
+    IEnumerator StopChargedShot(float deathTimer)
+    {
+        yield return new WaitForSeconds(1);
+        rigidbody2.bodyType = RigidbodyType2D.Static;
+        StartCoroutine(DestroyAfterDelay(deathTimer));
     }
 }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
+    
     [Header("Dictionary Values")]
     public int weaponCounter;
     public int nextWeaponCounter;
@@ -45,6 +46,7 @@ public class WeaponScript : MonoBehaviour
         nextWeaponCounter = Random.Range(0, 5);
         isCharging = false;
         m_transform = GetComponent<Transform>();
+        
     }
     void Update()
     {
@@ -57,6 +59,8 @@ public class WeaponScript : MonoBehaviour
             Charge();
         }
         Debug.Log(weaponType[weaponCounter]);
+
+       
     }
 
     void fire()
@@ -80,12 +84,18 @@ public class WeaponScript : MonoBehaviour
     }
     void chargedfire()
     {
-        
-        lineRender.enabled = true;
-       
-        StartCoroutine(StopLaser());
+
+        //lineRender.enabled = true;
+
+        //StartCoroutine(StopLaser());
         canFire = false;
-        if (Physics2D.Raycast(m_transform.position, transform.right))
+        GameObject weaponPrefab = ChargedShot;
+        GameObject weaponObject = Instantiate(weaponPrefab, spawnPos.position, spawnPos.rotation);
+        Rigidbody2D rb = weaponObject.GetComponent<Rigidbody2D>();
+        rb.AddForce(spawnPos.right * 100f, ForceMode2D.Impulse);
+
+
+        /*if (Physics2D.Raycast(m_transform.position, transform.right))
         {
             RaycastHit2D _hit = Physics2D.Raycast(m_transform.position, transform.right);
             Draw2DRay(spawnPos.position, _hit.point);
@@ -93,7 +103,7 @@ public class WeaponScript : MonoBehaviour
         else
         {
             Draw2DRay(spawnPos.position, spawnPos.transform.right * _laserDistance);
-        }
+        }*/
     }
     private void disableLaser()
     {
