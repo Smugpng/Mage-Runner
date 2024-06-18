@@ -9,6 +9,7 @@ TagManager:
   - LevelPolygons
   - canPickup
   - Rope
+  - Enemy
   layers:
   - Default
   - TransparentFX
