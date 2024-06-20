@@ -20,6 +20,7 @@ public class ShootingEnemy : MonoBehaviour
         if(Time.time > nextShotTime)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            
             nextShotTime = Time.time+ timeBetweenShots;
         }
         if (Vector2.Distance(target.position, target.position) < minimumDistance)

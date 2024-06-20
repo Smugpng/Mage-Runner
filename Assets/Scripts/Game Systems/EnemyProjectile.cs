@@ -47,10 +47,9 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // transform.LookAt((new Vector3(0, 0, target.position.z)));
-
+        // transform.LookAt((new Vector3(0, 0, target.position.z)));
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed*Time.deltaTime);
-        
+        if (transform.position == targetPos ) { Destroy(gameObject); }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -85,6 +84,6 @@ public class EnemyProjectile : MonoBehaviour
     IEnumerator DestroyAfterDelay(float deathTimer)
     {
         yield return new WaitForSeconds(deathTimer);
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }
