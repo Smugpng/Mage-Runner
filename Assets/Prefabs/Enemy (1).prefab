@@ -422,7 +422,7 @@ MonoBehaviour:
   - {x: -1.3588877, y: -4.852539, z: 0}
   m_ShapePathHash: 2061285133
   m_Mesh: {fileID: 0}
-  m_InstanceId: 32294
+  m_InstanceId: 37998
   m_LocalBounds:
     m_Center: {x: -0.31054688, y: -0.76342773, z: 0}
     m_Extent: {x: 1.0483408, y: 4.0891113, z: 0}
@@ -439,10 +439,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1499275261075143244}
-  walkSound: {fileID: 0}
-  _attackSound: {fileID: 0}
-  _dmgSound: {fileID: 0}
-  _deathSound: {fileID: 0}
+  walkSound: {fileID: 8300000, guid: 3d5b1841fa0b31c4c97d28c01578f820, type: 3}
+  _attackSound: {fileID: 8300000, guid: c13d6d65929538a47a64443824aa6acd, type: 3}
+  _dmgSound: {fileID: 8300000, guid: c13d6d65929538a47a64443824aa6acd, type: 3}
+  _deathSound: {fileID: 8300000, guid: c13d6d65929538a47a64443824aa6acd, type: 3}
 --- !u!82 &1499275261075143244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.582
   m_Pitch: 1
   Loop: 0
   Mute: 0
