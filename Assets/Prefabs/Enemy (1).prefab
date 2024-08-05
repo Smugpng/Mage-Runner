@@ -422,7 +422,7 @@ MonoBehaviour:
   - {x: -1.3588877, y: -4.852539, z: 0}
   m_ShapePathHash: 2061285133
   m_Mesh: {fileID: 0}
-  m_InstanceId: 37998
+  m_InstanceId: 37608
   m_LocalBounds:
     m_Center: {x: -0.31054688, y: -0.76342773, z: 0}
     m_Extent: {x: 1.0483408, y: 4.0891113, z: 0}
@@ -450,7 +450,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8196986336920060235}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
